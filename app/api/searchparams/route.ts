@@ -7,10 +7,10 @@ export async function POST(req:NextRequest){
     console.log(input.search)
     let data:any;
     const pool = new Pool({
-        user: 'postgres.nwclbsxownipdsaoshnh',
-        host: 'aws-0-us-west-1.pooler.supabase.com',
-        database: 'postgres',
-        password: '36hNGUAwqzhPrQg1',
+        user: process.env.USER,
+        host: process.env.HOST,
+        database: process.env.DATABASE,
+        password: process.env.PASSWORD,
         port: 5432,
     });
     //malicious input 'OR''='
